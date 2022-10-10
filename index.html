@@ -70,24 +70,45 @@
         <h3>An Audio</h3>
         <audio controls autoplay>
             <source src="file_example_MP3_5MG.mp3" type="audio/mpeg">
-          </audio>
+        </audio>
+        <details>
+            <summary>Bacteria</summary>
+            <p>Bacteria are free-living organisms that are very bad for human's health.</p>
+        </details>
+        <p>
+            Please enter your name below to support our program!<br>
+        </p>
+        <form>
+            <fieldset>
+                <legend>Notes:</legend>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" value="Enter here"><br>
+                <label for="browser">Choose your favourit sport from the list:</label>
+                <input list="browsers" name="browser" id="browser">
+                <datalist id="browsers">
+                    <option value="ski">
+                    <option value="snowboarding">
+                    <option value="surfing">
+                </datalist>
+                <br>
+                <textarea id="encourage" name="encourage" rows="4" cols="50">Enter something to encourage yourself!</textarea>
+                <br>
+                <label for="happy">Do you feel happy:</label>
+                <select name="happy" id="happy">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <br><br>
+                <button type="button" onclick="alert('Thank you!')">Submit</button>
+            </fieldset>
+        </form>
         <h3>Using unproper waste bags can cause dogs having dreams</h3>
         <strong>This is very important!<br></strong>
         <video width = "700" height = "900" controls>
             <source src = "Monnsia 2022-10-10 00.28.55.mp4" type = "video/mp4">
-        <details>
-            <summary>Bacteria</summary>
-            <p>Bacteria are free-living organisms that are very bad for human's health.</p>
-        </details>   
         
-        <form>
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname">
-          </form>
     </main>
     <footer></footer>
 
 </body>
-</html>/mu-xiaofan/CSE-110
+</html>
