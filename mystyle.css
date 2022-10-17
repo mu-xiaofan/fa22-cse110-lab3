@@ -1,0 +1,10 @@
+h1 {
+    font-size: 5em;
+    color: brown;
+    text-decoration-line: overline;
+    text-align: center;
+}
+h1.hidden{
+    display: none;
+}
+/*set all h1 to above sive*/
