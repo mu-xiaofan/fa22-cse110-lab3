@@ -7,4 +7,7 @@ h1 {
 h1.hidden{
     display: none;
 }
+p.p1{
+    font-size: 10ex;
+}
 /*set all h1 to above sive*/
