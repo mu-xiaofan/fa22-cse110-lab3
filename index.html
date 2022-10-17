@@ -1,6 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="mystyle.css">
+    <style>
+        /* This is a comment indicating the following style*/
+        body {
+          background-color: lightblue;
+        }
+        @media only screen and (max-width: 600px) {
+        body {
+        background-color: rgb(236, 249, 175);
+        }
+        }
+        a[target] {
+        background-color: rgb(146, 146, 35);
+        }
+        .p1 {
+        font-family: "Times New Roman", Times, serif;
+        }
+        h2{
+            font-size: 3rem;
+        }
+        h3{
+            font-size: 5ex;
+        }
+        h4{
+            font-size: 0.5cm;
+        }
+        h5{
+            font-size: 10mm;
+        }
+        h6{
+            font-size: 0.5in;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: helvetica;
+        }
+        .div0 {
+            width: 300px;
+            height: 500px;
+            border-radius: 10px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            padding-top: 50px;
+            margin-top: 20px;
+        }
+        .div0:hover{
+            color:pink;
+        }
+        
+        .myDiv{
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid red;
+        }
+        .myDiv:active {
+            color: #19bb7d;
+        }
+        .mySecond{
+            min-width: none;
+            border: 1px solid black;
+            margin: 25px 50px 75px 100px;
+            padding: 25px 50px 75px 100px;
+            background-color: rgb(160, 48, 153);
+        }
+        ,.mySecond > p {
+            background-color: yellow;
+        }
+        .mySecond + p {
+            background-color: yellow;
+        }
+        .mySecond ~ p{
+            background-color: yellow;
+        }
+        .div0 p{
+            background-color: yellow;
+        }
+        div.static {
+            position: static;
+            border: 3px solid #c61322;
+            }
+            div.relative {
+            position: relative;
+            left: 30px;
+            border: 3px solid #19e0d6;
+            }
+        span.a{
+            display: block;
+        }
+        span.b{
+            display: inline;
+        }
+        span.c {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid rgb(209, 132, 16);    
+            background-color: rgb(211, 211, 48); 
+        }
+        a:active {
+            color: red;
+        }
+        .flex {
+            display: flex;
+            background-color: rgb(163, 30, 208);
+        }
+        .flex > div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            background-color: #92d213;
+            padding: 10px;
+        }
+
+        .grid > div {
+            background-color: rgba(249, 135, 135, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+        #yellow {
+            background-color: yellow;
+        }
+        * {
+            
+        }
+
+        </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +144,17 @@
 </head>
 <body>
     <header>
-        <div>ALL CUTE DOGGIE STUFFS HERE!</div>
+        <div class = "div0">
+        ALL CUTE DOGGIE STUFFS HERE!
+        <p>Welcome welcome!</p>
+        </div>
+        <p id="yellow">Yellow is Icy's favourit color!</p>
+        <div class="static">
+            What else do you expect?
+        </div>
+        <div class="relative">
+            Nothing else!
+            </div>
         <nav>
             <ul>
                 <li><a href="#Date"> Date</a></li>
@@ -23,9 +168,18 @@
     </header>
     <main>
         <h1>Doggie Resting</h1>
+        <h1 class="hidden">This is a hidden heading</h1>
+        <h1 style="background-color:DodgerBlue;">In a blue mode!</h1>
         <img src="https://github.com/mu-xiaofan/CSE-110/blob/main/WechatIMG3.jpeg?raw=true" alt="dpggie" width="1000">
         <h5 id="Date">08/10/2022</h5>
+        <h2 style="background-color:#3c3c3c;">Lets start!</h2>
         <h3 id="Attendance">Attendance</h3>
+        <span class = "a">Here is the attendance:</span><span class = "a">Let's take a look!</span>
+        <div class="flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>  
+          </div>
         <ol>
             <li>Icy</li>
             <li>Cathy</li>
@@ -34,6 +188,7 @@
             <li>Jenny</li>
         </ol>
         <section>
+        <h2 style="background-color:hsl(248, 53%, 58%);">Welcome to Agenda!</h2>
         <h2 id="Agenda">Agenda</h2>
             <p>To start<br> Let's talk about the meeting agenda.</p>
         <ol>
@@ -42,13 +197,13 @@
             <li><input type="checkbox">Doggie walking schedule</li>
             <li><input type="checkbox">Doggie feeding schedule</li>
         </ol>
-        <p>
+        <p class="p1">
             The meeting agenda is very <b>important</b> for doggies and humans! We have to figure out what will be the best!
         </p>
         <ol>
-            <li>General Discussion</li>
-            <li>Group Discussion</li>
-            <li>Individual Interview</li>
+            <li>Group discussion</li>
+            <li>General discussion</li>
+            <li>Individual discussion</li>
         </ol>
         <span class="b">We need to read the meeting agenda carefully!</span><span class="b">Here we go!</span>
         <hr>
@@ -63,7 +218,7 @@
             <li>Pooping Bags</li>
         </ol>
         </section>
-        <h3 id="Questions">Questions</h3>
+        <h6 id="Questions">Questions</h6>
         <ol>
             <li>Will the doggie waste bags protect you from bacteria?</li>
             <li>What will be the best pet food topper/mixer?</li>
@@ -73,7 +228,7 @@
         <img src="https://github.com/mu-xiaofan/CSE-110/blob/main/WechatIMG11.jpeg?raw=true" alt="diagram" width="1200">
         <p>This diagram presented during the meeting shows the <i>number of bacteria after certain hours founded</i> out of dog waste bags from different companies. This is a very helpful resource for our research.</p>
         <hr>
-        <h3>An Audio</h3>
+        <h5>An Audio</h5>
         <audio controls autoplay>
             <source src="file_example_MP3_5MG.mp3" type="audio/mpeg">
         </audio>
@@ -108,11 +263,36 @@
                 <button type="button" onclick="alert('Thank you!')">Submit</button>
             </fieldset>
         </form>
-        <h3>Using unproper waste bags can cause dogs having dreams</h3>
+        <h4>Using unproper waste bags can cause dogs having dreams</h4>
+        <a href="#">Click here</a>
+        <p>We are going to assgin you into a class!</p>
+        <div class="grid">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>  
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>  
+            <div>7</div>
+            <div>8</div>
+          </div>
+        <p>Here is our class assignment regarding to your sutdent id!</p>
         <strong>This is very important!<br></strong>
+        <p style="color:red;">Don't ignore important messages!</p>
         <video width = "700" height = "900" controls>
             <source src = "doggie.mp4" type = "video/mp4">
         </video>
+        <div class = "myDiv">
+            <h2>Is this all?</h2>
+            <p>This is not!</p>
+        </div>
+        <div>It is important to talk about <span class="c">dog food</span> <span class="c">dog toys</span> !!!!!! </div>
+        <p>Please google for the best dog food brands!</p>
+        <a href="https://www.google.com" target="_blank">Google.com</a><br>
+        <div class = "mySecond">
+            <h2>Why???</h2>
+            <p>No!</p>
+        </mySecond>
         
     </main>
     <footer></footer>
